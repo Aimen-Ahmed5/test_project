@@ -6,6 +6,11 @@ import Web3 from 'web3';
 
 function App() {
 
+  cont [web3Api, setWeb3Api] = useState({
+    provider: null,
+    web3: null
+  }) 
+
   // useEffect is react's hook which is NOT written in return
   // metamask will help in 
 
@@ -33,6 +38,12 @@ function App() {
         provider = new Web3.providers.HttpProvider("http://localhost:7545");
       }
     };
+
+    //to reflect the changes in useState 
+    setWeb3Api({
+      web3 = new Web3(provider),
+      provider,
+    })
 
     loadProvider(); 
 
