@@ -25,7 +25,9 @@ function App() {
         } catch {
           console.log("User not allowed");
         }
-      } 
+      }  else if(window.web3){
+        provider = window.web3.currentProvider;
+      }
     };
 
     loadProvider(); 
