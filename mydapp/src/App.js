@@ -29,6 +29,8 @@ function App() {
         }
       }  else if(window.web3){
         provider = window.web3.currentProvider;
+      } else{
+        provider = new Web3.providers.HttpProvider("http://localhost:7545");
       }
     };
 
