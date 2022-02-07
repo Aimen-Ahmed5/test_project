@@ -1,7 +1,20 @@
 // import logo from './logo.svg';
+import {useEffect} from 'react';
 import './App.css';
 
 function App() {
+
+  // useEffect is react's hook which is NOT written in return
+  // metamask will help in 
+
+  useEffect(() => {
+    // loadProvider is an async function
+    const loadProvider = async () => {
+      // on installing metamask on project, it injects two objects on brower 1. web3 2. ethereum 
+      console.log(window.web3);
+      comsole.log(window.ethereum); 
+    };
+  }, [])
   return (
     <>
       <div class="card text-center">
@@ -11,19 +24,20 @@ function App() {
           <p class="card-text"> Account : 0x0000000000
             {/* Account : {account ? account : "not connected"} */}
           </p>
-          <button
-            type="button"
-            class="btn btn-success"
-            onClick={async () => {
-              const accounts = await window.ethereum.request({
-                method: "eth_requestAccounts",
-              });
-              console.log(accounts);
-            }}
-          >
-            Connect to metamask
-          </button>
-          &nbsp;
+          {/* <button */}
+          {/* // connect front end with metamask
+            type="button" class="btn btn-success"
+          //   onClick={async () => { */}
+          {/* //     const accounts = await window.ethereum.request({
+          //       method: "eth_requestAccounts",
+          //     });
+          //     console.log(accounts);
+          //   }} >
+          //   Connect to metamask
+          // </button> */}
+          
+
+           &nbsp;
           <button type="button" class="btn btn-success ">
             Transfer
           </button>
