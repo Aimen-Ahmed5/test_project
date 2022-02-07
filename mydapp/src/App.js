@@ -1,5 +1,5 @@
 // import logo from './logo.svg';
-import {useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import './App.css';
 
 import Web3 from 'web3';
@@ -41,7 +41,7 @@ function App() {
 
     //to reflect the changes in useState 
     setWeb3Api({
-      web3 = new Web3(provider),
+      web3: new Web3(provider),
       provider,
     })
 
