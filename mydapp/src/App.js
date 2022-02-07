@@ -47,6 +47,8 @@ function App() {
 
     loadProvider(); 
 
+    //print web3 settings
+    console.log(web3Api.web3);
   }, [])
 
   return (
