@@ -12,7 +12,7 @@ function App() {
     const loadProvider = async () => {
       // on installing metamask on project, it injects two objects on brower 1. web3 2. ethereum 
       console.log(window.web3);
-      comsole.log(window.ethereum); 
+      console.log(window.ethereum); 
     };
 
     loadProvider(); 
@@ -28,19 +28,15 @@ function App() {
           <p class="card-text"> Account : 0x0000000000
             {/* Account : {account ? account : "not connected"} */}
           </p>
-          {/* <button */}
-          {/* // connect front end with metamask
+          <button
+           // connect front end with metamask
             type="button" class="btn btn-success"
-          //   onClick={async () => { */}
-          {/* //     const accounts = await window.ethereum.request({
-          //       method: "eth_requestAccounts",
-          //     });
-          //     console.log(accounts);
-          //   }} >
-          //   Connect to metamask
-          // </button> */}
-          
-
+             onClick={async () => { 
+               const accounts = await window.ethereum.request({ method: "eth_requestAccounts"});
+              console.log(accounts);
+            }} >
+            Connect to metamask
+           </button>
            &nbsp;
           <button type="button" class="btn btn-success ">
             Transfer
