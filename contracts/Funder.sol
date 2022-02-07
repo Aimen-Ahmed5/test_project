@@ -9,7 +9,7 @@ contract Funder {
 
     mapping(uint256 => address) private funders;
 
-    receive() external payable{}
+    receive() external payable {}
 
     function transfer() external payable{
         funders[numOfFunders] = msg.sender;
