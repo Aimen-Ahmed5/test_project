@@ -14,7 +14,11 @@ function App() {
       console.log(window.web3);
       comsole.log(window.ethereum); 
     };
+
+    loadProvider(); 
+
   }, [])
+
   return (
     <>
       <div class="card text-center">
