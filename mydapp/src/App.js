@@ -20,6 +20,11 @@ function App() {
       // check if metamask is being used and this will automatically connect metamask to brower when loaded
       if(window.ethereum){
         provider = window.ethereum;
+        try {
+          await provider.enable();
+        } catch {
+          console.log("User not allowed");
+        }
       } 
     };
 
