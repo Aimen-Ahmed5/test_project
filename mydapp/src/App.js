@@ -2,6 +2,8 @@
 import {useEffect} from 'react';
 import './App.css';
 
+import Web3 from 'web3';
+
 function App() {
 
   // useEffect is react's hook which is NOT written in return
